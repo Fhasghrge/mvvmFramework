@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue</title>
+    <script src="../dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>qqq{{msg + '--的耳朵--'}}ppp</p>
+      <p v-text="msg"></p>
+      <input type="text" v-model="msg" />
+      <button @click="handleClick">得到</button>
+    </div>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          msg: '帆胜丰石帆胜丰沙',
+          info: '发士大夫士大夫',
+        },
+        methods: {
+          handleClick: function () {
+            console.log('handleClick', this.msg);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
